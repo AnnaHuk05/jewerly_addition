@@ -1,0 +1,257 @@
+
+
+
+{
+    "cubes": [
+      {
+        "name": "Order",
+        "description": "This OLAP cube is used to analyze orders of a jewelry store",       
+      "dimensions": [
+                     
+          {        	
+              "name": "date",
+              "label": "Date",
+              "levels": [
+                  {
+                      "name": "year",
+                      "label": "Year"
+                  },
+                  {
+                      "name": "quarter",
+                      "label":"Number of Quarter"
+                  },
+                  {
+                      "name": "month",
+                      "label": "Month"
+                  },
+                  {
+                      "name": "day-of-week",
+                      "label": "Day of week"
+                  },
+                  {
+                      "name":"date",
+                      "label": "Date"
+                  }
+              ],
+              "hierarchies": [
+                  {
+                      "name": "quarter",
+                      "label": "quarter",
+                      "levels": [ "year", "quarter"]
+                  },
+                  {
+                      "name": "monthly",
+                      "label": "Monthly",
+                      "levels": [ "year", "month"]
+                  },
+                   {
+                      "name": "monthly",
+                      "label": "Monthly",
+                      "levels": [ "year", "month"]
+                  },
+                 {
+                      "name": "daily",
+                      "label": "Daily",
+                      "levels": [ "year", "month","date"]
+                  }
+              ]
+          },
+          {
+              "name": "time",
+              "label": "Time",
+              "levels": [
+                  {
+                      "name": "hour",
+                      "label":"Hour"
+                  },
+                  {
+                      "name": "minute",
+                      "label": "Minute"
+                  },
+                  {
+                      "name": "part-of-day",
+                      "label": "Part of day"
+                  }
+              ],
+             "hierarchies": [
+                  {
+                      "name": "minute-measure",
+                      "label": "Minute",
+                      "levels": [ "hour", "minute"]
+                  }
+             ]
+          },
+        
+          {
+              "name": "customer",
+              "label": "Customer"			,
+              "levels": [ {
+                  "name": "customer",
+                   "key" : "id",
+                  "attributes": [ "id", "city","age", "sex"]
+              } ]
+          },
+          
+          {
+              "name": "product",
+              "label": "Product",
+              "levels": [
+                  {
+                      "name":"product",
+                      "attributes": [ "id", "type", "brand"],
+                      "key": "product_id"
+                  }
+              ]
+            
+          }
+         
+        ],
+        "measures":
+       [
+         {
+          "name":"quantity",
+          "type": "number"
+      },
+         {
+           "name":"amount",
+           "type": "number"
+         },
+          {
+           "name":"currency",
+           "type": "text"
+         },
+          {
+           "name":"currency",
+           "type": "text"
+         }]
+         },
+       {
+        "name": "prepayment",
+        "description": "This table is used to analyze prepayment with vendor in online jewerly shop",       
+      "dimensions": [
+                     
+          {        	
+              "name": "date",
+              "label": "Date",
+              "levels": [
+                  {
+                      "name": "year",
+                      "label": "Year"
+                  },
+                  {
+                      "name": "quarter",
+                      "label":"Number of Quarter"
+                  },
+                  {
+                      "name": "month",
+                      "label": "Month"
+                  },
+                  {
+                      "name": "day-of-week",
+                      "label": "Day of week"
+                  },
+                  {
+                      "name":"date",
+                      "label": "Date"
+                  }
+              ],
+              "hierarchies": [
+                  {
+                      "name": "quarter",
+                      "label": "quarter",
+                      "levels": [ "year", "quarter"]
+                  },
+                  {
+                      "name": "monthly",
+                      "label": "Monthly",
+                      "levels": [ "year", "month"]
+                  },
+                   {
+                      "name": "monthly",
+                      "label": "Monthly",
+                      "levels": [ "year", "month"]
+                  },
+                 {
+                      "name": "daily",
+                      "label": "Daily",
+                      "levels": [ "year", "month","date"]
+                  }
+              ]
+          },
+          {
+              "name": "time",
+              "label": "Time",
+              "levels": [
+                  {
+                      "name": "hour",
+                      "label":"Hour"
+                  },
+                  {
+                      "name": "minute",
+                      "label": "Minute"
+                  },
+                  {
+                      "name": "part-of-day",
+                      "label": "Part of day"
+                  }
+              ],
+             "hierarchies": [
+                  {
+                      "name": "minute-measure",
+                      "label": "Minute",
+                      "levels": [ "hour", "minute"]
+                  }
+             ]
+          },
+        
+          {
+              "name": "customer",
+              "label": "Customer"			,
+              "levels": [ {
+                  "name": "customer",
+                   "key" : "id",
+                  "attributes": [ "id", "city","age", "sex"]
+              } ]
+          },
+          
+          {
+              "name": "product",
+              "label": "Product",
+              "levels": [
+                  {
+                      "name":"product",
+                      "attributes": [ "id", "type", "brand"],
+                      "key": "product_id"
+                  }
+              ]
+            
+          }
+         
+        ],
+        "measures":
+       [
+         {
+          "name":"quantity",
+          "type": "number"
+      },
+         {
+           "name":"amount",
+           "type": "number"
+         },
+          {
+           "name":"currency",
+           "type": "text"
+         },
+          {
+           "name":"currency",
+           "type": "text"
+         }]
+         }
+    ]
+  }
+        
+      
+      
+        
+          
+        
